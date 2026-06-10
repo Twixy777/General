@@ -1,0 +1,235 @@
+{
+    "cells": [
+        {
+            "language": "javascript",
+            "source": [
+                "let x=0;\nlet n = `dfgdg${x}`;\nlet isContinue = true;\nlet tab = [6,8,3,1];\ntab[0]\nlet obj = {};\nobj.index = 0;\nobj.name = \"objekt 0\";\n\nlet fn = function(d,f){\n    return 0;\n}\n\nlet fn2 = (item) => {console.log(item)}\n// fn2()\n\n\ntab.forEach(fn2)\n\n\n\n\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "6",
+                                "8",
+                                "3",
+                                "1",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let dataTeraz = new Date();//Date.now();\ndataTeraz"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[35m2026-06-03T14:40:38.167Z\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const fs = require(\"fs\");\n\nfunction wczytajPlik(){\n    let sciezka = \"./dane.txt\";\n    const zawartosc = fs.readFileSync(sciezka, \"utf8\");\n    return zawartosc;\n}\n\nfunction zapiszPlik(){\n        sciezka = \"./dane.txt\";\n        let dane = \"hehehehehehe\";\n        fs.writeFileSync(sciezka, dane, \"utf8\");\n}\nzapiszPlik();\nwczytajPlik();\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'cccccccccccc'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const pustyObiekt = {};\nconst osoba1 = {};\nosoba1.imie = \"Filip\";\nosoba1.nazwisko = \"Tołysz\";\nosoba1.wzrost = 150;\nosoba1.wiek = 12;\n\nconst osoba2 = {};\nosoba2.imie = \"Filip2\";\nosoba2.nazwisko = \"Tołysz2\";\nosoba2.wzrost = 151;\nosoba2.wiek = 12;\n\nosoba2"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "{",
+                                "  imie: \u001b[32m'Filip2'\u001b[39m,",
+                                "  nazwisko: \u001b[32m'Tołysz2'\u001b[39m,",
+                                "  wzrost: \u001b[33m151\u001b[39m,",
+                                "  wiek: \u001b[33m12\u001b[39m",
+                                "}"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function Osoba(imie, nazwisko){\n    this.imie = imie;\n    this.nazwisko = nazwisko;\n    this.wzrost = 0;\n    this.wiek = 0;\n}\n\nconst filip = new Osoba(\"Filip\",\"Tołysz\");\nfilip.wzrost = 150;\nfilip.wiek = 12;\n\nfilip"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "Osoba {",
+                                "  imie: \u001b[32m'Filip'\u001b[39m,",
+                                "  nazwisko: \u001b[32m'Tołysz'\u001b[39m,",
+                                "  wzrost: \u001b[33m150\u001b[39m,",
+                                "  wiek: \u001b[33m12\u001b[39m",
+                                "}"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const osoby = [];\nfor(let i=0; i<10; i++){\n    osoby[i] = new Osoba(\"imie\"+i,`nazwisko${i}`);\n}\n\nosoby"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie0'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko0'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie1'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko1'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie2'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko2'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie3'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko3'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie4'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko4'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie5'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko5'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie6'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko6'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie7'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko7'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie8'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko8'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  },",
+                                "  Osoba {",
+                                "    imie: \u001b[32m'imie9'\u001b[39m,",
+                                "    nazwisko: \u001b[32m'nazwisko9'\u001b[39m,",
+                                "    wzrost: \u001b[33m0\u001b[39m,",
+                                "    wiek: \u001b[33m0\u001b[39m",
+                                "  }",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "class Osoba{\n    constructor(imie, nazwisko){\n        this.imie = imie;\n        this.nazwisko = nazwisko;\n        this.wzrost = 0;\n        this.wiek = 0;\n    }\n}\n\nconst arek = new Osoba(\"Arkadiusz\", \"Sawicz\");\n\narek"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "Osoba {",
+                                "  imie: \u001b[32m'Arkadiusz'\u001b[39m,",
+                                "  nazwisko: \u001b[32m'Sawicz'\u001b[39m,",
+                                "  wzrost: \u001b[33m0\u001b[39m,",
+                                "  wiek: \u001b[33m0\u001b[39m",
+                                "}"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let toDay = new Date();\ntoDay.toJSON();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'2026-06-10T14:47:33.880Z'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "class Game{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.price = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.developer = \"\";\n        this.publisher = \"\";\n        this.playerCount = 1;\n    }\n}"
+            ],
+            "outputs": []
+        }
+    ]
+}
