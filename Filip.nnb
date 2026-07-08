@@ -51,7 +51,7 @@
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[32m'cccccccccccc'\u001b[39m"
+                                "\u001b[32m'hehehehehehe'\u001b[39m"
                             ]
                         }
                     ]
@@ -227,9 +227,64 @@
         {
             "language": "javascript",
             "source": [
-                "class Game{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.price = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.developer = \"\";\n        this.publisher = \"\";\n        this.playerCount = 1;\n    }\n}"
+                "class GameData{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData()\ngame1.title = \"Need For Speed Unbound\"\nconst gameList = [game1]\ngameList"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  GameData {",
+                                "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
+                                "    genre: \u001b[32m''\u001b[39m,",
+                                "    platform: \u001b[32m''\u001b[39m,",
+                                "    releaseYear: \u001b[33m0\u001b[39m,",
+                                "    myPrice: \u001b[33m0\u001b[39m,",
+                                "    fullPrice: \u001b[33m0\u001b[39m,",
+                                "    rating: \u001b[33m0\u001b[39m,",
+                                "    myRating: \u001b[33m0\u001b[39m,",
+                                "    multiplayer: \u001b[33mfalse\u001b[39m,",
+                                "    publisher: \u001b[32m''\u001b[39m",
+                                "  }",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const fs = require(\"fs\");\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\nsaveGamesData(gameList)\nloadGamesData()"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "[",
+                                "  {",
+                                "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
+                                "    genre: \u001b[32m''\u001b[39m,",
+                                "    platform: \u001b[32m''\u001b[39m,",
+                                "    releaseYear: \u001b[33m0\u001b[39m,",
+                                "    myPrice: \u001b[33m0\u001b[39m,",
+                                "    fullPrice: \u001b[33m0\u001b[39m,",
+                                "    rating: \u001b[33m0\u001b[39m,",
+                                "    myRating: \u001b[33m0\u001b[39m,",
+                                "    multiplayer: \u001b[33mfalse\u001b[39m,",
+                                "    publisher: \u001b[32m''\u001b[39m",
+                                "  }",
+                                "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
