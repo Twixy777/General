@@ -227,9 +227,20 @@
         {
             "language": "javascript",
             "source": [
-                "class GameData{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData()\ngame1.title = \"Need For Speed Unbound\"\nconst gameList = [game1]\ngameList"
+                "class GameData{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData()\ngame1.title = \"Need For Speed Unbound\"\ngame1.genre = \"Racing\"\ngame1.platform = \"Steam\"\ngame1.releaseYear = 2022\ngame1.myPrice = 79.99\ngame1.fullPrice = 299.90\ngame1.rating = 6\ngame1.myRating = 8\ngame1.multiplayer = true\ngame1.publisher = \"Citerion Games\"\n\nconst game2 = new GameData()\ngame2.title = \"Geometry Dash\"\ngame2.genre = \"Rhythm Game\"\ngame2.platform = \"Steam\"\ngame2.releaseYear = 2014\ngame2.myPrice = 19.99\ngame2.fullPrice = 19.99\ngame2.rating = 9\ngame2.myRating = 6\ngame2.multiplayer = false\ngame2.publisher = \"RobTop Games\"\n\n\n///gameList///\nconst gameList = [game1, game2]\ngameList"
             ],
             "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
                 {
                     "items": [
                         {
@@ -238,15 +249,27 @@
                                 "[",
                                 "  GameData {",
                                 "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
-                                "    genre: \u001b[32m''\u001b[39m,",
-                                "    platform: \u001b[32m''\u001b[39m,",
-                                "    releaseYear: \u001b[33m0\u001b[39m,",
-                                "    myPrice: \u001b[33m0\u001b[39m,",
-                                "    fullPrice: \u001b[33m0\u001b[39m,",
-                                "    rating: \u001b[33m0\u001b[39m,",
-                                "    myRating: \u001b[33m0\u001b[39m,",
+                                "    genre: \u001b[32m'Racing'\u001b[39m,",
+                                "    platform: \u001b[32m'Steam'\u001b[39m,",
+                                "    releaseYear: \u001b[33m2022\u001b[39m,",
+                                "    myPrice: \u001b[33m79.99\u001b[39m,",
+                                "    fullPrice: \u001b[33m299.9\u001b[39m,",
+                                "    rating: \u001b[33m6\u001b[39m,",
+                                "    myRating: \u001b[33m8\u001b[39m,",
+                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
+                                "    publisher: \u001b[32m'Citerion Games'\u001b[39m",
+                                "  },",
+                                "  GameData {",
+                                "    title: \u001b[32m'Geometry Dash'\u001b[39m,",
+                                "    genre: \u001b[32m'Rhythm Game'\u001b[39m,",
+                                "    platform: \u001b[32m'Steam'\u001b[39m,",
+                                "    releaseYear: \u001b[33m2014\u001b[39m,",
+                                "    myPrice: \u001b[33m19.99\u001b[39m,",
+                                "    fullPrice: \u001b[33m19.99\u001b[39m,",
+                                "    rating: \u001b[33m9\u001b[39m,",
+                                "    myRating: \u001b[33m6\u001b[39m,",
                                 "    multiplayer: \u001b[33mfalse\u001b[39m,",
-                                "    publisher: \u001b[32m''\u001b[39m",
+                                "    publisher: \u001b[32m'RobTop Games'\u001b[39m",
                                 "  }",
                                 "]"
                             ]
@@ -264,20 +287,43 @@
                 {
                     "items": [
                         {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
                             "mime": "text/plain",
                             "value": [
                                 "[",
                                 "  {",
                                 "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
-                                "    genre: \u001b[32m''\u001b[39m,",
-                                "    platform: \u001b[32m''\u001b[39m,",
-                                "    releaseYear: \u001b[33m0\u001b[39m,",
-                                "    myPrice: \u001b[33m0\u001b[39m,",
-                                "    fullPrice: \u001b[33m0\u001b[39m,",
-                                "    rating: \u001b[33m0\u001b[39m,",
-                                "    myRating: \u001b[33m0\u001b[39m,",
+                                "    genre: \u001b[32m'Racing'\u001b[39m,",
+                                "    platform: \u001b[32m'Steam'\u001b[39m,",
+                                "    releaseYear: \u001b[33m2022\u001b[39m,",
+                                "    myPrice: \u001b[33m79.99\u001b[39m,",
+                                "    fullPrice: \u001b[33m299.9\u001b[39m,",
+                                "    rating: \u001b[33m6\u001b[39m,",
+                                "    myRating: \u001b[33m8\u001b[39m,",
+                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
+                                "    publisher: \u001b[32m'Citerion Games'\u001b[39m",
+                                "  },",
+                                "  {",
+                                "    title: \u001b[32m'Geometry Dash'\u001b[39m,",
+                                "    genre: \u001b[32m'Rhythm Game'\u001b[39m,",
+                                "    platform: \u001b[32m'Steam'\u001b[39m,",
+                                "    releaseYear: \u001b[33m2014\u001b[39m,",
+                                "    myPrice: \u001b[33m19.99\u001b[39m,",
+                                "    fullPrice: \u001b[33m19.99\u001b[39m,",
+                                "    rating: \u001b[33m9\u001b[39m,",
+                                "    myRating: \u001b[33m6\u001b[39m,",
                                 "    multiplayer: \u001b[33mfalse\u001b[39m,",
-                                "    publisher: \u001b[32m''\u001b[39m",
+                                "    publisher: \u001b[32m'RobTop Games'\u001b[39m",
                                 "  }",
                                 "]"
                             ]
