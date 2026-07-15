@@ -1,1 +1,1 @@
-[{"title":"Need For Speed Unbound","genre":"","platform":"","releaseYear":0,"myPrice":0,"fullPrice":0,"rating":0,"myRating":0,"multiplayer":false,"publisher":""}]
+[{"title":"Need For Speed Unbound","genre":"Racing","platform":"Steam","releaseYear":2022,"myPrice":79.99,"fullPrice":299.9,"rating":6,"myRating":8,"multiplayer":true,"publisher":"Citerion Games"},{"title":"Geometry Dash","genre":"Rhythm Game","platform":"Steam","releaseYear":2014,"myPrice":19.99,"fullPrice":19.99,"rating":9,"myRating":6,"multiplayer":false,"publisher":"RobTop Games"}]
