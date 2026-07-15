@@ -281,7 +281,7 @@
         {
             "language": "javascript",
             "source": [
-                "const fs = require(\"fs\");\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\nsaveGamesData(gameList)\nloadGamesData()"
+                "const fs = require(\"fs\");\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n//saveGamesData(gameList)\nloadGamesData()\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let jsonData = JSON.stringify(gameQueue)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}"
             ],
             "outputs": [
                 {
