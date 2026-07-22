@@ -227,7 +227,7 @@
         {
             "language": "javascript",
             "source": [
-                "class GameData{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData()\ngame1.title = \"Need For Speed Unbound\"\ngame1.genre = \"Racing\"\ngame1.platform = \"Steam\"\ngame1.releaseYear = 2022\ngame1.myPrice = 79.99\ngame1.fullPrice = 299.90\ngame1.rating = 6\ngame1.myRating = 8\ngame1.multiplayer = true\ngame1.publisher = \"Citerion Games\"\n\nconst game2 = new GameData()\ngame2.title = \"Geometry Dash\"\ngame2.genre = \"Rhythm Game\"\ngame2.platform = \"Steam\"\ngame2.releaseYear = 2014\ngame2.myPrice = 19.99\ngame2.fullPrice = 19.99\ngame2.rating = 9\ngame2.myRating = 6\ngame2.multiplayer = false\ngame2.publisher = \"RobTop Games\"\n\n\n///gameList///\nconst gameList = [game1, game2]\ngameList"
+                "class GameData{\n    constructor(){\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData()\ngame1.title = \"Need For Speed Unbound\"\ngame1.genre = \"Racing\"\ngame1.platform = \"Steam\"\ngame1.releaseYear = 2022\ngame1.myPrice = 79.99\ngame1.fullPrice = 299.90\ngame1.rating = 6\ngame1.myRating = 8\ngame1.multiplayer = true\ngame1.publisher = \"Citerion Games\"\n\nconst game2 = new GameData()\ngame2.title = \"Geometry Dash\"\ngame2.genre = \"Rhythm Game\"\ngame2.platform = \"Steam\"\ngame2.releaseYear = 2014\ngame2.myPrice = 19.99\ngame2.fullPrice = 19.99\ngame2.rating = 9\ngame2.myRating = 6\ngame2.multiplayer = false\ngame2.publisher = \"RobTop Games\"\n\nconst game3 = new GameData()\ngame3.title = \"Hogwarts Legacy\"\ngame2.genre = \"RPG\"\ngame3.platform = \"Epic Games\"\ngame3.releaseYear = 2023\ngame3.myPrice = 0\ngame3.fullPrice = 269\ngame3.rating = 9\ngame3.myRating = 9\ngame3.multiplayer = false\ngame3.publisher = \"Warner Bros. Games\"\n\n\nconst game4 = new GameData()\ngame4.title = \"Among us\"\ngame4.genre = \"SurvivalRPG\"\ngame4.platform = \"Steam\"\ngame4.releaseYear = 2018   \ngame4.myPrice = 18.99\ngame4.fullPrice = 18.99\ngame4.rating = 9\ngame4.myrating = 8\ngame4.multiplayer = true\ngame4.publisher = \"Innersloth\"\n\n///gameList///\nconst gameList = [game1, game2, game3, game4]\ngameList"
             ],
             "outputs": [
                 {
@@ -261,7 +261,7 @@
                                 "  },",
                                 "  GameData {",
                                 "    title: \u001b[32m'Geometry Dash'\u001b[39m,",
-                                "    genre: \u001b[32m'Rhythm Game'\u001b[39m,",
+                                "    genre: \u001b[32m'RPG'\u001b[39m,",
                                 "    platform: \u001b[32m'Steam'\u001b[39m,",
                                 "    releaseYear: \u001b[33m2014\u001b[39m,",
                                 "    myPrice: \u001b[33m19.99\u001b[39m,",
@@ -270,6 +270,31 @@
                                 "    myRating: \u001b[33m6\u001b[39m,",
                                 "    multiplayer: \u001b[33mfalse\u001b[39m,",
                                 "    publisher: \u001b[32m'RobTop Games'\u001b[39m",
+                                "  },",
+                                "  GameData {",
+                                "    title: \u001b[32m'Hogwarts Legacy'\u001b[39m,",
+                                "    genre: \u001b[32m''\u001b[39m,",
+                                "    platform: \u001b[32m'Epic Games'\u001b[39m,",
+                                "    releaseYear: \u001b[33m2023\u001b[39m,",
+                                "    myPrice: \u001b[33m0\u001b[39m,",
+                                "    fullPrice: \u001b[33m269\u001b[39m,",
+                                "    rating: \u001b[33m9\u001b[39m,",
+                                "    myRating: \u001b[33m9\u001b[39m,",
+                                "    multiplayer: \u001b[33mfalse\u001b[39m,",
+                                "    publisher: \u001b[32m'Warner Bros. Games'\u001b[39m",
+                                "  },",
+                                "  GameData {",
+                                "    title: \u001b[32m'Among us'\u001b[39m,",
+                                "    genre: \u001b[32m'SurvivalRPG'\u001b[39m,",
+                                "    platform: \u001b[32m'Steam'\u001b[39m,",
+                                "    releaseYear: \u001b[33m2018\u001b[39m,",
+                                "    myPrice: \u001b[33m18.99\u001b[39m,",
+                                "    fullPrice: \u001b[33m18.99\u001b[39m,",
+                                "    rating: \u001b[33m9\u001b[39m,",
+                                "    myRating: \u001b[33m0\u001b[39m,",
+                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
+                                "    publisher: \u001b[32m'Innersloth'\u001b[39m,",
+                                "    myrating: \u001b[33m8\u001b[39m",
                                 "  }",
                                 "]"
                             ]
