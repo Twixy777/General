@@ -303,7 +303,7 @@
         {
             "language": "javascript",
             "source": [
-                "const fs = require(\"fs\");\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let jsonData = JSON.stringify(gameQueue)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nsaveGamesData(gameList)\nloadGamesData();\nconst myQueue = [game1, game4, game3]\nmyQueue\nsaveGameQueue(myQueue)\nloadGameQueue()"
+                "const fs = require(\"fs\");\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let ids = []\n    for(let j = 0; j<gameQueue.length; j++){\n        let queue = gameQueue[j]\n        ids.push(queue.id)\n    }\n    let jsonData = JSON.stringify(ids)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nsaveGamesData(gameList)\nloadGamesData();\nconst myQueue = [game1, game4, game3]\nmyQueue\nsaveGameQueue(myQueue)\nloadGameQueue()\n"
             ],
             "outputs": [
                 {
@@ -365,7 +365,7 @@
         {
             "language": "javascript",
             "source": [
-                "function findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\n\nconst games = loadGamesData()\nfindGameByID(games, 1)"
+                "function findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\nconst games = loadGamesData()\nfindGameByID(games, 1)"
             ],
             "outputs": [
                 {
