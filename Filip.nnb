@@ -33,7 +33,7 @@
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[35m2026-06-03T14:40:38.167Z\u001b[39m"
+                                "\u001b[35m2026-08-14T11:48:20.378Z\u001b[39m"
                             ]
                         }
                     ]
@@ -217,7 +217,7 @@
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[32m'2026-06-10T14:47:33.880Z'\u001b[39m"
+                                "\u001b[32m'2026-08-14T11:48:20.501Z'\u001b[39m"
                             ]
                         }
                     ]
@@ -313,6 +313,7 @@
                             "value": [
                                 "[",
                                 "  {",
+                                "    id: \u001b[33m1\u001b[39m,",
                                 "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
                                 "    genre: \u001b[32m'Racing'\u001b[39m,",
                                 "    platform: \u001b[32m'Steam'\u001b[39m,",
@@ -326,6 +327,7 @@
                                 "    publisher: \u001b[32m'Citerion Games'\u001b[39m",
                                 "  },",
                                 "  {",
+                                "    id: \u001b[33m4\u001b[39m,",
                                 "    title: \u001b[32m'Among us'\u001b[39m,",
                                 "    genre: \u001b[32m'SurvivalRPG'\u001b[39m,",
                                 "    platform: \u001b[32m'Steam'\u001b[39m,",
@@ -340,6 +342,7 @@
                                 "    myrating: \u001b[33m8\u001b[39m",
                                 "  },",
                                 "  {",
+                                "    id: \u001b[33m3\u001b[39m,",
                                 "    title: \u001b[32m'Hogwarts Legacy'\u001b[39m,",
                                 "    genre: \u001b[32m''\u001b[39m,",
                                 "    platform: \u001b[32m'Epic Games'\u001b[39m,",
@@ -353,6 +356,37 @@
                                 "    publisher: \u001b[32m'Warner Bros. Games'\u001b[39m",
                                 "  }",
                                 "]"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\n\nconst games = loadGamesData()\nfindGameByID(games, 1)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "{",
+                                "  id: \u001b[33m1\u001b[39m,",
+                                "  title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
+                                "  genre: \u001b[32m'Racing'\u001b[39m,",
+                                "  platform: \u001b[32m'Steam'\u001b[39m,",
+                                "  releaseYear: \u001b[33m2022\u001b[39m,",
+                                "  myPrice: \u001b[33m79.99\u001b[39m,",
+                                "  fullPrice: \u001b[33m299.9\u001b[39m,",
+                                "  rating: \u001b[33m6\u001b[39m,",
+                                "  myRating: \u001b[33m8\u001b[39m,",
+                                "  isDone: \u001b[33mfalse\u001b[39m,",
+                                "  multiplayer: \u001b[33mtrue\u001b[39m,",
+                                "  publisher: \u001b[32m'Citerion Games'\u001b[39m",
+                                "}"
                             ]
                         }
                     ]
