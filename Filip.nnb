@@ -33,7 +33,7 @@
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[35m2026-08-14T11:48:20.378Z\u001b[39m"
+                                "\u001b[35m2026-08-19T15:24:05.632Z\u001b[39m"
                             ]
                         }
                     ]
@@ -217,7 +217,7 @@
                         {
                             "mime": "text/plain",
                             "value": [
-                                "\u001b[32m'2026-08-14T11:48:20.501Z'\u001b[39m"
+                                "\u001b[32m'2026-08-19T15:24:05.719Z'\u001b[39m"
                             ]
                         }
                     ]
@@ -303,7 +303,7 @@
         {
             "language": "javascript",
             "source": [
-                "const fs = require(\"fs\");\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let ids = []\n    for(let j = 0; j<gameQueue.length; j++){\n        let queue = gameQueue[j]\n        ids.push(queue.id)\n    }\n    let jsonData = JSON.stringify(ids)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nsaveGamesData(gameList)\nloadGamesData();\nconst myQueue = [game1, game4, game3]\nmyQueue\nsaveGameQueue(myQueue)\nloadGameQueue()\n"
+                "const fs = require(\"fs\");\n\nfunction findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\n\nfunction findGamesByIDs(gameArr, idArr){\n    const findedGames = []\n    for(let i = 0; i<idArr.length; i++){\n        let id = idArr[i]\n        let game = findGameByID(gameArr, id)\n        findedGames.push(game)\n    }\n    return findedGames \n}\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let ids = []\n    for(let j = 0; j<gameQueue.length; j++){\n        let queue = gameQueue[j]\n        ids.push(queue.id)\n    }\n    let jsonData = JSON.stringify(ids)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const gameIDs = JSON.parse(stringData)\n    let allGames = loadGamesData()\n    return findGamesByIDs(allGames, gameIDs)\n}\n\nsaveGamesData(gameList)\nloadGamesData();\nconst myQueue = [game1, game4, game3]\nmyQueue\nsaveGameQueue(myQueue)\nloadGameQueue()\n"
             ],
             "outputs": [
                 {
@@ -356,37 +356,6 @@
                                 "    publisher: \u001b[32m'Warner Bros. Games'\u001b[39m",
                                 "  }",
                                 "]"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "language": "javascript",
-            "source": [
-                "function findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\nconst games = loadGamesData()\nfindGameByID(games, 1)"
-            ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "{",
-                                "  id: \u001b[33m1\u001b[39m,",
-                                "  title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
-                                "  genre: \u001b[32m'Racing'\u001b[39m,",
-                                "  platform: \u001b[32m'Steam'\u001b[39m,",
-                                "  releaseYear: \u001b[33m2022\u001b[39m,",
-                                "  myPrice: \u001b[33m79.99\u001b[39m,",
-                                "  fullPrice: \u001b[33m299.9\u001b[39m,",
-                                "  rating: \u001b[33m6\u001b[39m,",
-                                "  myRating: \u001b[33m8\u001b[39m,",
-                                "  isDone: \u001b[33mfalse\u001b[39m,",
-                                "  multiplayer: \u001b[33mtrue\u001b[39m,",
-                                "  publisher: \u001b[32m'Citerion Games'\u001b[39m",
-                                "}"
                             ]
                         }
                     ]
