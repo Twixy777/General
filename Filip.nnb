@@ -5,362 +5,70 @@
             "source": [
                 "let x=0;\nlet n = `dfgdg${x}`;\nlet isContinue = true;\nlet tab = [6,8,3,1];\ntab[0]\nlet obj = {};\nobj.index = 0;\nobj.name = \"objekt 0\";\n\nlet fn = function(d,f){\n    return 0;\n}\n\nlet fn2 = (item) => {console.log(item)}\n// fn2()\n\n\ntab.forEach(fn2)\n\n\n\n\n"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "6",
-                                "8",
-                                "3",
-                                "1",
-                                ""
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "let dataTeraz = new Date();//Date.now();\ndataTeraz"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "\u001b[35m2026-08-19T15:24:05.632Z\u001b[39m"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "const fs = require(\"fs\");\n\nfunction wczytajPlik(){\n    let sciezka = \"./dane.txt\";\n    const zawartosc = fs.readFileSync(sciezka, \"utf8\");\n    return zawartosc;\n}\n\nfunction zapiszPlik(){\n        sciezka = \"./dane.txt\";\n        let dane = \"hehehehehehe\";\n        fs.writeFileSync(sciezka, dane, \"utf8\");\n}\nzapiszPlik();\nwczytajPlik();\n"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "\u001b[32m'hehehehehehe'\u001b[39m"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "const pustyObiekt = {};\nconst osoba1 = {};\nosoba1.imie = \"Filip\";\nosoba1.nazwisko = \"Tołysz\";\nosoba1.wzrost = 150;\nosoba1.wiek = 12;\n\nconst osoba2 = {};\nosoba2.imie = \"Filip2\";\nosoba2.nazwisko = \"Tołysz2\";\nosoba2.wzrost = 151;\nosoba2.wiek = 12;\n\nosoba2"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "{",
-                                "  imie: \u001b[32m'Filip2'\u001b[39m,",
-                                "  nazwisko: \u001b[32m'Tołysz2'\u001b[39m,",
-                                "  wzrost: \u001b[33m151\u001b[39m,",
-                                "  wiek: \u001b[33m12\u001b[39m",
-                                "}"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "function Osoba(imie, nazwisko){\n    this.imie = imie;\n    this.nazwisko = nazwisko;\n    this.wzrost = 0;\n    this.wiek = 0;\n}\n\nconst filip = new Osoba(\"Filip\",\"Tołysz\");\nfilip.wzrost = 150;\nfilip.wiek = 12;\n\nfilip"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "Osoba {",
-                                "  imie: \u001b[32m'Filip'\u001b[39m,",
-                                "  nazwisko: \u001b[32m'Tołysz'\u001b[39m,",
-                                "  wzrost: \u001b[33m150\u001b[39m,",
-                                "  wiek: \u001b[33m12\u001b[39m",
-                                "}"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "const osoby = [];\nfor(let i=0; i<10; i++){\n    osoby[i] = new Osoba(\"imie\"+i,`nazwisko${i}`);\n}\n\nosoby"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "[",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie0'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko0'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie1'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko1'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie2'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko2'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie3'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko3'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie4'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko4'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie5'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko5'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie6'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko6'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie7'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko7'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie8'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko8'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  },",
-                                "  Osoba {",
-                                "    imie: \u001b[32m'imie9'\u001b[39m,",
-                                "    nazwisko: \u001b[32m'nazwisko9'\u001b[39m,",
-                                "    wzrost: \u001b[33m0\u001b[39m,",
-                                "    wiek: \u001b[33m0\u001b[39m",
-                                "  }",
-                                "]"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "class Osoba{\n    constructor(imie, nazwisko){\n        this.imie = imie;\n        this.nazwisko = nazwisko;\n        this.wzrost = 0;\n        this.wiek = 0;\n    }\n}\n\nconst arek = new Osoba(\"Arkadiusz\", \"Sawicz\");\n\narek"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "Osoba {",
-                                "  imie: \u001b[32m'Arkadiusz'\u001b[39m,",
-                                "  nazwisko: \u001b[32m'Sawicz'\u001b[39m,",
-                                "  wzrost: \u001b[33m0\u001b[39m,",
-                                "  wiek: \u001b[33m0\u001b[39m",
-                                "}"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
                 "let toDay = new Date();\ntoDay.toJSON();"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "\u001b[32m'2026-08-19T15:24:05.719Z'\u001b[39m"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
-                "class GameData{\n    constructor(){\n        this.id = 0;\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.isDone = false\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData()\ngame1.id = 1\ngame1.title = \"Need For Speed Unbound\"\ngame1.genre = \"Racing\"\ngame1.platform = \"Steam\"\ngame1.releaseYear = 2022\ngame1.myPrice = 79.99\ngame1.fullPrice = 299.90\ngame1.rating = 6\ngame1.myRating = 8\ngame1.isDone = false\ngame1.multiplayer = true\ngame1.publisher = \"Citerion Games\"\n\nconst game2 = new GameData()\ngame2.id = 2\ngame2.title = \"Geometry Dash\"\ngame2.genre = \"Rhythm Game\"\ngame2.platform = \"Steam\"\ngame2.releaseYear = 2014\ngame2.myPrice = 19.99\ngame2.fullPrice = 19.99\ngame2.rating = 9\ngame2.myRating = 6\ngame2.isDone = false\ngame2.multiplayer = false\ngame2.publisher = \"RobTop Games\"\n\nconst game3 = new GameData()\ngame3.id = 3\ngame3.title = \"Hogwarts Legacy\"\ngame2.genre = \"RPG\"\ngame3.platform = \"Epic Games\"\ngame3.releaseYear = 2023\ngame3.myPrice = 0\ngame3.fullPrice = 269\ngame3.rating = 9\ngame3.myRating = 9\ngame3.isDone = false\ngame3.multiplayer = false\ngame3.publisher = \"Warner Bros. Games\"\n\n\nconst game4 = new GameData()\ngame4.id = 4\ngame4.title = \"Among us\"\ngame4.genre = \"SurvivalRPG\"\ngame4.platform = \"Steam\"\ngame4.releaseYear = 2018   \ngame4.myPrice = 18.99\ngame4.fullPrice = 18.99\ngame4.rating = 9\ngame4.myrating = 8\ngame4.isDone = false\ngame4.multiplayer = true\ngame4.publisher = \"Innersloth\"\n\n///gameList///\nconst gameList = [game1, game2, game3, game4]\ngameList"
+                "const fs = require(\"fs\");\n\nclass GameData {\n    constructor() {\n        this.id = 0;\n        this.title = \"\";\n        this.genre = \"\";\n        this.platform = \"\";\n        this.releaseYear = 0;\n        this.myPrice = 0;\n        this.fullPrice = 0;\n        this.rating = 0;\n        this.myRating = 0;\n        this.isDone = false;\n        this.multiplayer = false;\n        this.publisher = \"\";\n    }\n}\n\nconst game1 = new GameData();\ngame1.id = 1;\ngame1.title = \"Need For Speed Unbound\";\ngame1.genre = \"Racing\";\ngame1.platform = \"Steam\";\ngame1.releaseYear = 2022;\ngame1.myPrice = 79.99;\ngame1.fullPrice = 299.90;\ngame1.rating = 6;\ngame1.myRating = 8;\ngame1.isDone = false;\ngame1.multiplayer = true;\ngame1.publisher = \"Criterion Games\";\n\nconst game2 = new GameData();\ngame2.id = 2;\ngame2.title = \"Geometry Dash\";\ngame2.genre = \"Rhythm Game\";\ngame2.platform = \"Steam\";\ngame2.releaseYear = 2014;\ngame2.myPrice = 19.99;\ngame2.fullPrice = 19.99;\ngame2.rating = 9;\ngame2.myRating = 6;\ngame2.isDone = false;\ngame2.multiplayer = false;\ngame2.publisher = \"RobTop Games\";\n\nconst game3 = new GameData();\ngame3.id = 3;\ngame3.title = \"Hogwarts Legacy\";\ngame3.genre = \"RPG\";\ngame3.platform = \"Epic Games\";\ngame3.releaseYear = 2023;\ngame3.myPrice = 0;\ngame3.fullPrice = 269;\ngame3.rating = 9;\ngame3.myRating = 9;\ngame3.isDone = false;\ngame3.multiplayer = false;\ngame3.publisher = \"Warner Bros. Games\";\n\nconst game4 = new GameData();\ngame4.id = 4;\ngame4.title = \"Among us\";\ngame4.genre = \"SurvivalRPG\";\ngame4.platform = \"Steam\";\ngame4.releaseYear = 2018;\ngame4.myPrice = 18.99;\ngame4.fullPrice = 18.99;\ngame4.rating = 9;\ngame4.myRating = 8;\ngame4.isDone = false;\ngame4.multiplayer = true;\ngame4.publisher = \"Innersloth\";\n\nfunction calculateNextId() {\n    let filepath = \"./ids.txt\";\n    let stringData = fs.readFileSync(filepath, \"utf8\");\n    let ids = JSON.parse(stringData);\n    ids.sort((a, b) => a - b);\n    let q = ids[ids.length - 1];\n    return q + 1;\n}\n\nconst gameList = [game1, game2, game3, game4];\n\nfunction addGame() {\n    const game = new GameData();\n    const id = calculateNextId();\n    game.id = id;\n    gameList.push(game);\n    let filepath = \"./ids.txt\";\n    const usedIds = fs.readFileSync(filepath, \"utf8\");\n    const ids = JSON.parse(usedIds);\n    ids.push(id);\n    let saving = JSON.stringify(ids);\n    fs.writeFileSync(filepath, saving);\n}\n\naddGame();\n\ngameList;"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "[",
-                                "  GameData {",
-                                "    id: \u001b[33m1\u001b[39m,",
-                                "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
-                                "    genre: \u001b[32m'Racing'\u001b[39m,",
-                                "    platform: \u001b[32m'Steam'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2022\u001b[39m,",
-                                "    myPrice: \u001b[33m79.99\u001b[39m,",
-                                "    fullPrice: \u001b[33m299.9\u001b[39m,",
-                                "    rating: \u001b[33m6\u001b[39m,",
-                                "    myRating: \u001b[33m8\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
-                                "    publisher: \u001b[32m'Citerion Games'\u001b[39m",
-                                "  },",
-                                "  GameData {",
-                                "    id: \u001b[33m2\u001b[39m,",
-                                "    title: \u001b[32m'Geometry Dash'\u001b[39m,",
-                                "    genre: \u001b[32m'RPG'\u001b[39m,",
-                                "    platform: \u001b[32m'Steam'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2014\u001b[39m,",
-                                "    myPrice: \u001b[33m19.99\u001b[39m,",
-                                "    fullPrice: \u001b[33m19.99\u001b[39m,",
-                                "    rating: \u001b[33m9\u001b[39m,",
-                                "    myRating: \u001b[33m6\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mfalse\u001b[39m,",
-                                "    publisher: \u001b[32m'RobTop Games'\u001b[39m",
-                                "  },",
-                                "  GameData {",
-                                "    id: \u001b[33m3\u001b[39m,",
-                                "    title: \u001b[32m'Hogwarts Legacy'\u001b[39m,",
-                                "    genre: \u001b[32m''\u001b[39m,",
-                                "    platform: \u001b[32m'Epic Games'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2023\u001b[39m,",
-                                "    myPrice: \u001b[33m0\u001b[39m,",
-                                "    fullPrice: \u001b[33m269\u001b[39m,",
-                                "    rating: \u001b[33m9\u001b[39m,",
-                                "    myRating: \u001b[33m9\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mfalse\u001b[39m,",
-                                "    publisher: \u001b[32m'Warner Bros. Games'\u001b[39m",
-                                "  },",
-                                "  GameData {",
-                                "    id: \u001b[33m4\u001b[39m,",
-                                "    title: \u001b[32m'Among us'\u001b[39m,",
-                                "    genre: \u001b[32m'SurvivalRPG'\u001b[39m,",
-                                "    platform: \u001b[32m'Steam'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2018\u001b[39m,",
-                                "    myPrice: \u001b[33m18.99\u001b[39m,",
-                                "    fullPrice: \u001b[33m18.99\u001b[39m,",
-                                "    rating: \u001b[33m9\u001b[39m,",
-                                "    myRating: \u001b[33m0\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
-                                "    publisher: \u001b[32m'Innersloth'\u001b[39m,",
-                                "    myrating: \u001b[33m8\u001b[39m",
-                                "  }",
-                                "]"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "javascript",
             "source": [
-                "const fs = require(\"fs\");\n\nfunction findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\n\nfunction findGamesByIDs(gameArr, idArr){\n    const findedGames = []\n    for(let i = 0; i<idArr.length; i++){\n        let id = idArr[i]\n        let game = findGameByID(gameArr, id)\n        findedGames.push(game)\n    }\n    return findedGames \n}\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let ids = []\n    for(let j = 0; j<gameQueue.length; j++){\n        let queue = gameQueue[j]\n        ids.push(queue.id)\n    }\n    let jsonData = JSON.stringify(ids)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const gameIDs = JSON.parse(stringData)\n    let allGames = loadGamesData()\n    return findGamesByIDs(allGames, gameIDs)\n}\n\nsaveGamesData(gameList)\nloadGamesData();\nconst myQueue = [game1, game4, game3]\nmyQueue\nsaveGameQueue(myQueue)\nloadGameQueue()\n"
+                "function findGameByID(gameArr, id){\n    for(let i = 0; i<gameArr.length; i++){\n        let game = gameArr[i]\n        if(game.id == id){\n            return game\n        }\n    }\n}\n\nfunction findGamesByIDs(gameArr, idArr){\n    const findedGames = []\n    for(let i = 0; i<idArr.length; i++){\n        let id = idArr[i]\n        let game = findGameByID(gameArr, id)\n        findedGames.push(game)\n    }\n    return findedGames \n}\n\nfunction loadGamesData(){\n    let filePath = \"./dane.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const data = JSON.parse(stringData)\n    return data;\n}\n\nfunction saveGamesData(gameList){\n    let filePath = \"./dane.txt\";\n    let jsonData = JSON.stringify(gameList)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\n\nfunction saveGameQueue(gameQueue){\n    let filePath = \"./gameQueue.txt\";\n    let ids = []\n    for(let j = 0; j<gameQueue.length; j++){\n        let queue = gameQueue[j]\n        ids.push(queue.id)\n    }\n    let jsonData = JSON.stringify(ids)\n    fs.writeFileSync(filePath, jsonData, \"utf8\");\n}\n\nfunction loadGameQueue(){\n    let filePath = \"./gameQueue.txt\";\n    const stringData = fs.readFileSync(filePath, \"utf8\");\n    const gameIDs = JSON.parse(stringData)\n    let allGames = loadGamesData()\n    return findGamesByIDs(allGames, gameIDs)\n}\n\n\n\n\n\n\n\n\n\n\n\nsaveGamesData(gameList)\nloadGamesData();\nconst myQueue = [game1, game4, game3]\nmyQueue\nsaveGameQueue(myQueue)\nloadGameQueue()\n"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "text/plain",
-                            "value": [
-                                "[",
-                                "  {",
-                                "    id: \u001b[33m1\u001b[39m,",
-                                "    title: \u001b[32m'Need For Speed Unbound'\u001b[39m,",
-                                "    genre: \u001b[32m'Racing'\u001b[39m,",
-                                "    platform: \u001b[32m'Steam'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2022\u001b[39m,",
-                                "    myPrice: \u001b[33m79.99\u001b[39m,",
-                                "    fullPrice: \u001b[33m299.9\u001b[39m,",
-                                "    rating: \u001b[33m6\u001b[39m,",
-                                "    myRating: \u001b[33m8\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
-                                "    publisher: \u001b[32m'Citerion Games'\u001b[39m",
-                                "  },",
-                                "  {",
-                                "    id: \u001b[33m4\u001b[39m,",
-                                "    title: \u001b[32m'Among us'\u001b[39m,",
-                                "    genre: \u001b[32m'SurvivalRPG'\u001b[39m,",
-                                "    platform: \u001b[32m'Steam'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2018\u001b[39m,",
-                                "    myPrice: \u001b[33m18.99\u001b[39m,",
-                                "    fullPrice: \u001b[33m18.99\u001b[39m,",
-                                "    rating: \u001b[33m9\u001b[39m,",
-                                "    myRating: \u001b[33m0\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mtrue\u001b[39m,",
-                                "    publisher: \u001b[32m'Innersloth'\u001b[39m,",
-                                "    myrating: \u001b[33m8\u001b[39m",
-                                "  },",
-                                "  {",
-                                "    id: \u001b[33m3\u001b[39m,",
-                                "    title: \u001b[32m'Hogwarts Legacy'\u001b[39m,",
-                                "    genre: \u001b[32m''\u001b[39m,",
-                                "    platform: \u001b[32m'Epic Games'\u001b[39m,",
-                                "    releaseYear: \u001b[33m2023\u001b[39m,",
-                                "    myPrice: \u001b[33m0\u001b[39m,",
-                                "    fullPrice: \u001b[33m269\u001b[39m,",
-                                "    rating: \u001b[33m9\u001b[39m,",
-                                "    myRating: \u001b[33m9\u001b[39m,",
-                                "    isDone: \u001b[33mfalse\u001b[39m,",
-                                "    multiplayer: \u001b[33mfalse\u001b[39m,",
-                                "    publisher: \u001b[32m'Warner Bros. Games'\u001b[39m",
-                                "  }",
-                                "]"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         }
     ]
 }
