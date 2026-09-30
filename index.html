@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodaj grę</title>
+  <style>
+    body {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 5px;
+    }
+
+    input, button {
+      padding: 10px;
+      font: inherit;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    pre {
+      padding: 16px;
+      background: #f3f3f3;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dodaj grę</h1>
+
+  <form id="gameForm">
+    <label>
+      ID
+      <input name="id" type="number" min="1" value="3" required>
+    </label>
+
+    <label>
+      Tytuł
+      <input name="title" value="Hogwarts Legacy" required>
+    </label>
+
+    <label>
+      Gatunek
+      <input name="genre" value="RPG" required>
+    </label>
+
+    <label>
+      Platforma
+      <input name="platform" value="Epic Games" required>
+    </label>
+
+    <label>
+      Rok wydania
+      <input name="releaseYear" type="number" min="1900"
+             max="2100" value="2023" required>
+    </label>
+
+    <label>
+      Cena zakupu (zł)
+      <input name="myPrice" type="number" min="0"
+             step="0.01" value="0" required>
+    </label>
+
+    <label>
+      Pełna cena (zł)
+      <input name="fullPrice" type="number" min="0"
+             step="0.01" value="269" required>
+    </label>
+
+    <label>
+      Ocena (0–10)
+      <input name="rating" type="number" min="0"
+             max="10" step="0.1" value="9" required>
+    </label>
+
+    <label>
+      Moja ocena (0–10)
+      <input name="myRating" type="number" min="0"
+             max="10" step="0.1" value="9" required>
+    </label>
+
+    <label>
+      Wydawca
+      <input name="publisher" value="Warner Bros. Games" required>
+    </label>
+
+    <label class="checkbox">
+      <input name="isDone" type="checkbox">
+      Gra ukończona
+    </label>
+
+    <label class="checkbox">
+      <input name="multiplayer" type="checkbox">
+      Tryb wieloosobowy
+    </label>
+
+    <button type="submit">Zapisz</button>
+  </form>
+
+  <pre id="result" aria-live="polite" hidden></pre>
+
+  <script>
+    class GameData {}
+
+    const form = document.querySelector("#gameForm");
+    const result = document.querySelector("#result");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const data = new FormData(form);
+      const game = new GameData();
+
+      game.id = Number(data.get("id"));
+      game.title = data.get("title").trim();
+      game.genre = data.get("genre").trim();
+      game.platform = data.get("platform").trim();
+      game.releaseYear = Number(data.get("releaseYear"));
+      game.myPrice = Number(data.get("myPrice"));
+      game.fullPrice = Number(data.get("fullPrice"));
+      game.rating = Number(data.get("rating"));
+      game.myRating = Number(data.get("myRating"));
+      game.isDone = data.has("isDone");
+      game.multiplayer = data.has("multiplayer");
+      game.publisher = data.get("publisher").trim();
+
+      console.log(game);
+
+      result.textContent = JSON.stringify(game, null, 2);
+      result.hidden = false;
+    });
+  </script>
+</body>
+</html>
